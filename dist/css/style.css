@@ -1,0 +1,217 @@
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: Muller;
+  font-display: swap;
+  src: url("../fonts/Muller-Bold.woff2") format("woff2"), url("../fonts/Muller-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Muller;
+  font-display: swap;
+  src: url("../fonts/Muller-Medium.woff2") format("woff2"), url("../fonts/Muller-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: Regular;
+  font-style: normal;
+}
+@font-face {
+  font-family: Muller;
+  font-display: swap;
+  src: url("../fonts/Muller-Regular.woff2") format("woff2"), url("../fonts/Muller-Regular.woff") format("woff");
+  font-weight: Regular;
+  font-style: normal;
+}
+@font-face {
+  font-family: Muller;
+  font-display: swap;
+  src: url("../fonts/Muller-Light.woff2") format("woff2"), url("../fonts/Muller-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  font-family: "Montserrat", sans-serif;
+  text-rendering: optimizeSpeed;
+  line-height: 1;
+  background-color: #fff;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+.container {
+  max-width: 1270px;
+  padding: 0 15px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  background-color: #fff;
+}
+.header__right {
+  display: flex;
+  align-items: center;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 115px;
+}
+
+.header__logo {
+  font: 400 14px/20px "Muller";
+  text-decoration: none;
+  color: #150603;
+}
+
+.menu__list {
+  display: flex;
+}
+
+.menu__item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.menu__link {
+  font: 400 14px/20px "Muller";
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.25);
+  transition: color 0.3s ease;
+}
+.menu__link:hover {
+  color: #150603;
+}
+
+.header__search {
+  position: relative;
+  width: 340px;
+  height: 45px;
+  background-color: #F3F3F3;
+  border-radius: 22.5px;
+  display: flex;
+  align-items: center;
+  padding-left: 21px;
+}
+.header__search svg {
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  right: 30px;
+  top: 13px;
+}
+
+.header__input {
+  font: 400 14px/20px "Montserrat";
+  background-color: transparent;
+  outline: none;
+  border: none;
+  margin-bottom: 3px;
+}
+.header__input::placeholder {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.25);
+  font: 400 14px/20px "Montserrat";
+}
+
+.header__links {
+  display: flex;
+  position: relative;
+  margin-left: 50px;
+}
+.header__links li {
+  transition: transform 0.3s ease;
+}
+.header__links li:not(:last-child) {
+  margin-right: 15px;
+}
+.header__links li:hover {
+  transform: translateY(-4px);
+}
+.header__links li:hover .header__login-text {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+.header__link {
+  text-decoration: none;
+}
+.header__link svg {
+  width: 24px;
+  height: 24px;
+  stroke: #000;
+  fill: none;
+}
+
+.header__login-text {
+  font: 400 9px/14px "Muller";
+  text-decoration: none;
+  color: #150603;
+  position: absolute;
+  top: -16px;
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.3s ease;
+}

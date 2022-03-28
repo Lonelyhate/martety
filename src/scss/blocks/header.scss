@@ -1,0 +1,119 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: $mainColor;
+    &__right{
+        display: flex;
+        align-items: center;
+    }
+}
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 115px;
+}
+.container {
+}
+.header__logo {
+    font: $fontRegularMul;
+    text-decoration: none;
+    color: $colorBlack;
+}
+.header__menu {
+}
+.menu {
+}
+.menu__icon {
+}
+.menu__body {
+}
+.menu__list {
+    display: flex;
+}
+.menu__item {
+    &:not(:last-child) {
+        margin-right: 40px;
+    }
+}
+.menu__link {
+    font: $fontRegularMul;
+    text-decoration: none;
+    color: $colorGrey;
+    transition: color 0.3s ease;
+    &:hover{
+        color: $colorBlack;
+    }
+}
+.header__search {
+    position: relative;
+    width: 340px;
+    height: 45px;
+    background-color: $colorWhiteDark;
+    border-radius: 22.5px;
+    display: flex;
+    align-items: center;
+    padding-left: 21px;
+    svg{
+        position: absolute;
+        width: 19px;
+        height: 19px;
+        right: 30px;
+        top: 13px;
+    }
+}
+.header__input {
+    font: $fontRegularMonts;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    margin-bottom: 3px;
+    &::placeholder{
+        font-size: 14px;
+        color: $colorGrey;
+        font: $fontRegularMonts;
+    }
+}
+.header__links {
+    display: flex;
+    position: relative;
+    margin-left: 50px;
+    li{
+        transition: transform 0.3s ease;
+        &:not(:last-child){
+            margin-right: 15px;
+        }
+        &:hover{
+            transform: translateY(-4px);
+            .header__login-text{
+                opacity: 1;
+                visibility: visible;
+                pointer-events: all;
+            }
+        }
+    }
+}
+.header__link{
+    text-decoration: none;
+    svg{
+        width: 24px;
+        height: 24px;
+        stroke: #000;
+        fill: none;
+    }
+
+}
+.header__login-text{
+    font: $fontRegularSmallMull;
+    text-decoration: none;
+    color: $colorBlack;
+    position: absolute;
+    top: -16px;
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
