@@ -110,6 +110,10 @@ dd {
 .header__right {
   display: flex;
   align-items: center;
+  margin-left: 90px;
+}
+.header__social {
+  display: none;
 }
 
 .header__container {
@@ -125,12 +129,21 @@ dd {
   color: #150603;
 }
 
+.menu__body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .menu__list {
   display: flex;
 }
 
-.menu__item:not(:last-child) {
+.menu__item:not(:nth-child(5)) {
   margin-right: 40px;
+}
+.menu__item:nth-last-child(-n+3) {
+  display: none;
 }
 
 .menu__link {
@@ -214,4 +227,177 @@ dd {
   pointer-events: none;
   opacity: 0;
   transition: all 0.3s ease;
+}
+
+@media (max-width: 1200px) {
+  .header__right {
+    margin-left: 50px;
+  }
+  .header__logo {
+    margin-right: 20px;
+  }
+}
+@media (max-width: 1100px) {
+  .header__search {
+    width: 280px;
+  }
+  .header__links {
+    margin-left: 25px;
+  }
+  .header__right {
+    margin-left: 20px;
+  }
+}
+@media (max-width: 1000px) {
+  .header__logo {
+    margin-right: 20px;
+  }
+  .header__right {
+    margin-left: 20px;
+  }
+  .header__search {
+    width: 200px;
+  }
+
+  .menu__item:not(:nth-child(5)) {
+    margin-right: 40px;
+  }
+}
+@media (max-width: 900px) {
+  .header__logo {
+    position: relative;
+    z-index: 4;
+  }
+  .header__container {
+    height: 51px;
+  }
+  .header__links {
+    display: none;
+  }
+  .header__right {
+    margin-left: 0;
+  }
+  .header__search {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .menu__icon {
+    position: relative;
+    display: block;
+    z-index: 5;
+    width: 25px;
+    height: 17px;
+    cursor: pointer;
+  }
+  .menu__icon span {
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: #150603;
+    top: 50%;
+    transform: scale(1) translateY(-50%);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  .menu__icon::before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: #150603;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  .menu__icon::after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: #150603;
+    bottom: 0;
+    left: 0;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  .menu__icon.active span {
+    transform: scale(0);
+  }
+  .menu__icon.active::before {
+    top: 50%;
+    transform: rotate(-45deg) translateY(-50%);
+  }
+  .menu__icon.active::after {
+    bottom: 50%;
+    transform: rotate(45deg) translate(0, 50%);
+  }
+  .menu__body {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 3;
+    display: block;
+    width: 100%;
+    text-align: right;
+    padding: 50px 15px;
+    transition: left 0.5s ease;
+  }
+  .menu__body.active {
+    left: 0;
+  }
+  .menu__list {
+    display: block;
+  }
+  .menu__item {
+    margin-bottom: 25px;
+  }
+  .menu__item:not(:last-child) {
+    margin-right: 0;
+  }
+  .menu__item:nth-last-child(-n+3) {
+    display: block;
+  }
+  .menu__item:last-child a svg {
+    transform: translateY(2px);
+    margin-right: 5px;
+  }
+  .menu__item:nth-last-child(2) a svg {
+    transform: translateY(2px);
+    margin-right: 5px;
+  }
+  .menu__item:nth-last-child(3) a svg {
+    transform: translateY(2px);
+    margin-right: 5px;
+  }
+  .menu__item:not(:nth-child(5)) {
+    margin-right: 0;
+  }
+  .menu__link {
+    font: 400 18px/29px "Muller";
+  }
+  .menu__link svg {
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: rgba(0, 0, 0, 0.25);
+  }
+
+  .header-social {
+    display: flex;
+    justify-content: end;
+    margin-top: 25px;
+  }
+  .header-social__item:not(:last-child) {
+    margin-right: 15px;
+  }
+  .header-social__link svg {
+    width: 27px;
+    height: 27px;
+  }
 }
