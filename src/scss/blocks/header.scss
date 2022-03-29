@@ -19,6 +19,8 @@
     align-items: center;
     justify-content: space-between;
     height: 115px;
+    position: relative;
+    z-index: 90;
 }
 .container {
 }
@@ -82,6 +84,7 @@
     outline: none;
     border: none;
     margin-bottom: 3px;
+    width: calc(100% - 50px);
     &::placeholder{
         font-size: 14px;
         color: $colorGrey;
@@ -253,8 +256,8 @@
         }
         &__body{
             position: fixed;
-            top: 0;
-            left: -100%;
+            top: -100%;
+            left: 0;
             height: 100%;
             background-color: $mainColor;
             z-index: 3;
@@ -262,9 +265,9 @@
             width: 100%;
             text-align: right;
             padding: 50px 15px;
-            transition: left 0.5s ease;
+            transition: top 0.5s ease;
             &.active{
-                left: 0;
+                top: 0;
             }
         }
         &__list{
