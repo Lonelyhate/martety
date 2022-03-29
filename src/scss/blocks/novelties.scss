@@ -1,0 +1,160 @@
+.novelties {
+    padding: 80px 0;
+    
+}
+.novelties__container {
+}
+.container {
+}
+.novelties__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 45px;
+}
+.novelties__title {
+}
+
+.novelties__link {
+    font-size: 24px;
+    text-decoration: none;
+    color: $colorBlack;
+    
+    &:hover{
+        svg{
+            transform: translateX(7px);
+            opacity: 1;
+        }
+    }
+    svg{
+        width: 36px;
+        height: 12px;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        opacity: 0;
+        margin-left: -3px;
+    }
+}
+.novelties__slider {
+}
+.novelties-slider {
+    &__link{
+        text-decoration: none;
+    }
+}
+.swiper {
+}
+.novelties-slider__wrapper {
+}
+.swiper-wrapper {
+}
+.novelties-slider__slide {
+    display: block;
+    width: auto;
+    text-decoration: none;
+}
+.swiper-slide {
+    width: auto;
+
+}
+.novelties-slider__img {
+    height: 320px;
+    margin-bottom: 25px;
+    img{
+        display: block;
+        height: 100%;
+        width: auto;
+    }
+}
+.novelties-slider__title {
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    line-height: 33.6px;
+    margin-bottom: 8px;
+    color: $colorBlack;
+}
+.novelties-slider__painter {
+    font: $fontRegularMonts;
+    color: $colorBlack;
+    margin-bottom: 8px;
+}
+.novelties-slider__price {
+    font: $fontRegularMonts;
+    color: $colorBlack;
+}
+
+@media (max-width: 1270px) {
+    .novelties-slider{
+        position: relative;
+        left: 0;
+        right: -15px;
+        width: calc(100% + 15px);
+    }
+}
+
+@media (max-width: 900px) {
+    .novelties{
+        &__link{
+            font-size: 20px;
+        }
+        &-slider{
+            &__img{
+                height: 290px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .novelties{
+        &__link{
+            font-size: 20px;
+            svg{
+                display: none;
+            }
+        }
+        &-slider{
+            &__img{
+                height: 250px;
+                margin-bottom: 15px;
+            }
+            &__title{
+                margin-bottom: 0px;
+            }
+            &__painter{
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .novelties{
+        &__link{
+            font-size: 14px;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .novelties{
+        &-slider{
+            &__img{
+                height: 200px;
+                margin-bottom: 7px;
+            }
+            &__title{
+                font-size: 13px;
+                line-height: 18.3px;
+                margin-bottom: 0px;
+            }
+            &__painter{
+                font: $fontRegularMonst10;
+                margin-bottom: 0;
+            }
+            &__price{
+                font: $fontRegularMonst10;
+            }
+        }
+    }
+}

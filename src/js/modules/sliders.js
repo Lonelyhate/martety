@@ -25,6 +25,11 @@ const sliders = () => {
         }
     })
     
+    new Swiper('.novelties-slider', {
+        speed: 500,
+        slidesPerView: 'auto',
+        spaceBetween: 30
+    })
 }
 
 export default sliders;

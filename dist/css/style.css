@@ -80,6 +80,7 @@ h1,
 h2,
 h3,
 h4,
+h5,
 p,
 ul,
 ol,
@@ -99,6 +100,33 @@ dd {
   margin: 0 auto;
 }
 
+.title-main {
+  font-family: "Muller", sans-serif;
+  font-size: 72px;
+  font-weight: 500;
+  color: #150603;
+}
+
+@media (max-width: 900px) {
+  .title-main {
+    font-size: 60px;
+  }
+}
+@media (max-width: 760px) {
+  .title-main {
+    font-size: 50px;
+  }
+}
+@media (max-width: 630px) {
+  .title-main {
+    font-size: 40px;
+  }
+}
+@media (max-width: 500px) {
+  .title-main {
+    font-size: 30px;
+  }
+}
 .header {
   position: fixed;
   top: 0;
@@ -748,4 +776,134 @@ dd {
 
 .swiper-centered > .swiper-wrapper > .swiper-slide {
   scroll-snap-align: center center;
+}
+
+.novelties {
+  padding: 80px 0;
+}
+
+.novelties__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 45px;
+}
+
+.novelties__link {
+  font-size: 24px;
+  text-decoration: none;
+  color: #150603;
+}
+.novelties__link:hover svg {
+  transform: translateX(7px);
+  opacity: 1;
+}
+.novelties__link svg {
+  width: 36px;
+  height: 12px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  margin-left: -3px;
+}
+
+.novelties-slider__link {
+  text-decoration: none;
+}
+
+.novelties-slider__slide {
+  display: block;
+  width: auto;
+  text-decoration: none;
+}
+
+.swiper-slide {
+  width: auto;
+}
+
+.novelties-slider__img {
+  height: 320px;
+  margin-bottom: 25px;
+}
+.novelties-slider__img img {
+  display: block;
+  height: 100%;
+  width: auto;
+}
+
+.novelties-slider__title {
+  font-size: 24px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  line-height: 33.6px;
+  margin-bottom: 8px;
+  color: #150603;
+}
+
+.novelties-slider__painter {
+  font: 400 14px/20px "Montserrat";
+  color: #150603;
+  margin-bottom: 8px;
+}
+
+.novelties-slider__price {
+  font: 400 14px/20px "Montserrat";
+  color: #150603;
+}
+
+@media (max-width: 1270px) {
+  .novelties-slider {
+    position: relative;
+    left: 0;
+    right: -15px;
+    width: calc(100% + 15px);
+  }
+}
+@media (max-width: 900px) {
+  .novelties__link {
+    font-size: 20px;
+  }
+  .novelties-slider__img {
+    height: 290px;
+  }
+}
+@media (max-width: 768px) {
+  .novelties__link {
+    font-size: 20px;
+  }
+  .novelties__link svg {
+    display: none;
+  }
+  .novelties-slider__img {
+    height: 250px;
+    margin-bottom: 15px;
+  }
+  .novelties-slider__title {
+    margin-bottom: 0px;
+  }
+  .novelties-slider__painter {
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 600px) {
+  .novelties__link {
+    font-size: 14px;
+  }
+}
+@media (max-width: 500px) {
+  .novelties-slider__img {
+    height: 200px;
+    margin-bottom: 7px;
+  }
+  .novelties-slider__title {
+    font-size: 13px;
+    line-height: 18.3px;
+    margin-bottom: 0px;
+  }
+  .novelties-slider__painter {
+    font: 400 10px/14px "Montserrat";
+    margin-bottom: 0;
+  }
+  .novelties-slider__price {
+    font: 400 10px/14px "Montserrat";
+  }
 }
