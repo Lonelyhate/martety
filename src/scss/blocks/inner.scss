@@ -16,12 +16,14 @@
     font-weight: 500;
     width: 100%;
     margin-bottom: 30px;
+    letter-spacing: -10px;
 }
 .inner-title__top {
     display: block;
-    font-size: 223px;
+    font-size: 238px;
     width: 100%;
     text-align: right;
+    letter-spacing: -12px;
 }
 .inner-title__middle {
 }
@@ -35,6 +37,7 @@
     color: $colorBlack;
     text-transform: none;
     max-width: 340px;
+    letter-spacing: 0;
 }
 .inner-title__right {
 }
@@ -109,8 +112,10 @@
         padding-top: 130px;
         &-title{
             font-size: 150px;
+            letter-spacing: -8px;
             &__top{
                 font-size: 150px;
+                letter-spacing: -8px;
             }
         }
     }
@@ -152,6 +157,7 @@
             font-size: 120px;
             &__top{
                 font-size: 120px;
+                letter-spacing: -6px;
             }
         }
     }
@@ -161,8 +167,10 @@
     .inner{
         &-title{
             font-size: 90px;
+            letter-spacing: -5px;
             &__top{
                 font-size: 90px;
+                letter-spacing: -5px;
             }
             &__left{
                 max-width: 100%;
@@ -175,8 +183,10 @@
     .inner{
         &-title{
             font-size: 72px;
+            letter-spacing: -4px;
             &__top{
                 font-size: 72px;
+                letter-spacing: -4px;
             }
             &__left{
                 font-size: 12px;
@@ -189,8 +199,10 @@
     .inner{
         &-title{
             font-size: 60px;
+            letter-spacing: -3px;
             &__top{
                 font-size: 60px;
+                letter-spacing: -3px;
             }
         }
     }

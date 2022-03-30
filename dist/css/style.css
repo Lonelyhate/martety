@@ -448,13 +448,15 @@ dd {
   font-weight: 500;
   width: 100%;
   margin-bottom: 30px;
+  letter-spacing: -10px;
 }
 
 .inner-title__top {
   display: block;
-  font-size: 223px;
+  font-size: 238px;
   width: 100%;
   text-align: right;
+  letter-spacing: -12px;
 }
 
 .inner-title__bottom {
@@ -468,6 +470,7 @@ dd {
   color: #150603;
   text-transform: none;
   max-width: 340px;
+  letter-spacing: 0;
 }
 
 .inner-slider {
@@ -544,9 +547,11 @@ dd {
   }
   .inner-title {
     font-size: 150px;
+    letter-spacing: -8px;
   }
   .inner-title__top {
     font-size: 150px;
+    letter-spacing: -8px;
   }
 }
 @media (max-width: 930px) {
@@ -583,14 +588,17 @@ dd {
   }
   .inner-title__top {
     font-size: 120px;
+    letter-spacing: -6px;
   }
 }
 @media (max-width: 668px) {
   .inner-title {
     font-size: 90px;
+    letter-spacing: -5px;
   }
   .inner-title__top {
     font-size: 90px;
+    letter-spacing: -5px;
   }
   .inner-title__left {
     max-width: 100%;
@@ -599,9 +607,11 @@ dd {
 @media (max-width: 568px) {
   .inner-title {
     font-size: 72px;
+    letter-spacing: -4px;
   }
   .inner-title__top {
     font-size: 72px;
+    letter-spacing: -4px;
   }
   .inner-title__left {
     font-size: 12px;
@@ -610,9 +620,11 @@ dd {
 @media (max-width: 450px) {
   .inner-title {
     font-size: 60px;
+    letter-spacing: -3px;
   }
   .inner-title__top {
     font-size: 60px;
+    letter-spacing: -3px;
   }
 }
 @font-face {
@@ -905,5 +917,168 @@ dd {
   }
   .novelties-slider__price {
     font: 400 10px/14px "Montserrat";
+  }
+}
+.news {
+  padding: 80px 0;
+}
+
+.news__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 45px;
+  align-items: flex-end;
+}
+
+.news__link {
+  text-decoration: none;
+  color: #150603;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  margin-bottom: 14px;
+}
+
+.news-slider__img {
+  width: 397px;
+  height: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.news-slider__img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1270px) {
+  .news-slider {
+    position: relative;
+    left: 0;
+    right: -15px;
+    width: calc(100% + 15px);
+  }
+}
+@media (max-width: 900px) {
+  .news__link {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+}
+@media (max-width: 768px) {
+  .news__header {
+    margin-bottom: 30px;
+  }
+  .news__link {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .news-slider__img {
+    width: 300px;
+    height: 250px;
+  }
+}
+@media (max-width: 630px) {
+  .news__header {
+    margin-bottom: 20px;
+  }
+  .news__link {
+    font-size: 16px;
+    margin-bottom: 9px;
+  }
+}
+@media (max-width: 500px) {
+  .news__link {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+  .news-slider__img {
+    width: 254px;
+    height: 199px;
+  }
+}
+.curated-collections__title {
+  margin-bottom: 50px;
+}
+
+.curated-collections__content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.curated-collections__item {
+  width: 370px;
+  height: 309px;
+  background-color: #F8F8F8;
+  padding: 13px;
+  margin-bottom: 40px;
+  border-radius: 20px;
+  position: relative;
+}
+.curated-collections__item:not(:nth-child(3n)) {
+  margin-right: 10px;
+}
+
+.curated-collections__img {
+  position: absolute;
+  border-radius: 20px;
+  top: 13px;
+  left: 13px;
+  border-radius: 10px;
+  width: 344px;
+  height: 285px;
+  overflow: hidden;
+}
+.curated-collections__img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.curated-collections__text {
+  position: absolute;
+  z-index: 2;
+  bottom: 22px;
+  left: 28px;
+}
+
+.curated-collections__subtitle {
+  font-family: "Muller", sans-serif;
+  font-size: 24px;
+  color: #150603;
+  font-weight: 500;
+  margin-bottom: 7px;
+}
+
+.curated-collections__topic {
+  font-family: "Muller", sans-serif;
+  font-size: 14px;
+  color: #150603;
+  font-weight: 400;
+}
+
+@media (max-width: 1176px) {
+  .curated-collections__item {
+    width: 340px;
+    border-radius: 10px;
+  }
+  .curated-collections__img {
+    width: 316px;
+    top: 12px;
+    left: 12px;
+  }
+}
+@media (max-width: 1090px) {
+  .curated-collections__content {
+    justify-content: space-around;
+  }
+}
+@media (max-width: 400px) {
+  .curated-collections__item {
+    width: 100%;
+  }
+  .curated-collections__img {
+    width: calc(100% - 24px);
   }
 }

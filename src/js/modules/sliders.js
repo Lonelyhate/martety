@@ -30,6 +30,11 @@ const sliders = () => {
         slidesPerView: 'auto',
         spaceBetween: 30
     })
+    new Swiper('.news-slider', {
+        speed: 500,
+        slidesPerView: 'auto',
+        spaceBetween: 25
+    })
 }
 
 export default sliders;
