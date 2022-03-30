@@ -1,0 +1,233 @@
+.footer {
+    background-color: #111013;
+    padding: 55px 0;
+}
+.footer__container {
+}
+.container {
+}
+.footer__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 130px;
+}
+.footer__logo {
+    text-decoration: none;
+    color: $mainColor;
+}
+.footer__social {
+}
+.footer-social {
+    display: flex;
+}
+.footer-social__item {
+    margin-left: 16px;
+}
+.footer-social__link {
+    svg{
+        width: 27px;
+        height: 27px;
+        fill: $mainColor;
+    }
+}
+.footer__menu {
+}
+.footer-menu {
+    display: flex;
+    &__row{
+        display: flex;
+        &:first-child{
+            margin-right: 60px;
+            .footer-menu__column{
+                &:first-child{
+                    width: 150px;
+                }
+            }
+        }
+        &:nth-child(2){
+            width: 100%;
+            .footer-menu__column{
+                &:last-child{
+                    margin-left: auto;
+                }
+            }
+        }
+        &:last-child{
+            display: none;
+        }
+    }
+}
+.footer-menu__column {
+
+    &:not(:last-child) {
+        margin-right: 60px;
+    }
+   
+}
+.footer-menu__title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #DDDDDD;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 14px;
+}
+.footer-menu__list {
+}
+.footer-menu__item {
+    margin-bottom: 5px;
+    &:last-child{
+        margin-left: auto;
+    }
+    
+}
+.footer-menu__link {
+    transition: color 0.3s ease;
+    &:hover{
+        color: $mainColor;
+    }
+}
+.footer-menu__text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14.5px;
+    color: #DDDDDD;
+    text-decoration: none;
+}
+.footer-menu__form {
+}
+.footer-form {
+    &__text{
+        max-width: 270px;
+        margin-bottom: 19px;
+    }
+}
+.footer-form__input {
+    border: 1px solid #545454;
+    background-color: transparent;
+    width: 187px;
+    height: 50px;
+    border-radius: 27.5px;
+    padding: 0 20px;
+    font-size: 12px;
+    color: #DDDDDD;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+    margin-right: 10px;
+    &::placeholder{
+        font-size: 12px;
+        color: #DDDDDD;
+        font-family: 'Montserrat', sans-serif;
+    }
+}
+.footer-form__btn {
+    height: 50px;
+    padding: 0 14px;
+    background-color: #2E2E2E;
+    border: 1px solid #545454;
+    border-radius: 27.5px;
+    color: #DDDDDD;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+}
+
+@media (max-width: 1140px) {
+    .footer-menu{
+        &__row{
+            &:first-child{
+                margin-right: 25px;
+            }
+        }
+        &__column{
+            &:not(:last-child){
+                margin-right: 25px;
+            }
+        }
+    }
+}
+
+@media (max-width: 994px) {
+    .footer-menu{
+        flex-wrap: wrap;
+        &__column{
+            width: 50%;
+            margin-right: 0 !important;
+            &_first{
+                display: none;
+            }
+        }
+        &__row{
+            width: 100%;
+            &:first-child{
+                margin-right: 0;
+                .footer-menu__column{
+                    &:first-child{
+                        
+                    }
+                }
+            }
+            &:nth-child(2){
+                margin-top: 40px;
+                .footer-menu__column{
+                    &:first-child{
+                        
+                    }
+                    &:last-child{
+                        margin-left: 0;
+                    }
+                }
+            }
+            &:last-child{
+                display: block;
+                margin-top: 40px;
+            }
+        }
+    }
+    .footer-menu__row:first-child .footer-menu__column:first-child {
+        width: 50%;;
+    }
+    .footer-form{
+        width: 265px;
+        &__input{
+            display: block;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        &__btn{
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+@media (max-with: 768px) {
+    .footer__header{
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 580px) {
+    .footer{
+        padding: 30px 0 50px;
+        &-menu{
+            &__text{
+                font-size: 11px;
+                line-height: 13.4px;
+            }
+        }
+        &__header{
+            margin-bottom: 60px;
+        }
+    }
+    .footer-form{
+        width: 166px;
+        &__text{
+            font-size: 8px;
+        }
+    }
+}
+
