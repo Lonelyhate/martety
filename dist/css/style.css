@@ -107,6 +107,20 @@ dd {
   color: #150603;
 }
 
+.btn-black {
+  background-color: #150603;
+  color: #fff;
+  font-size: 18px;
+  font-family: "Muller", sans-serif;
+  text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 51px;
+  border-radius: 39px;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.05);
+}
+
 @media (max-width: 900px) {
   .title-main {
     font-size: 60px;
@@ -120,6 +134,11 @@ dd {
 @media (max-width: 630px) {
   .title-main {
     font-size: 40px;
+  }
+
+  .btn-black {
+    height: 42px;
+    font-size: 16px;
   }
 }
 @media (max-width: 500px) {
@@ -997,6 +1016,16 @@ dd {
     height: 199px;
   }
 }
+.curated-collections__container {
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.curated-collections__link {
+  padding: 5px 27px 0;
+}
+
 .curated-collections__title {
   margin-bottom: 50px;
 }
@@ -1072,6 +1101,11 @@ dd {
 @media (max-width: 1090px) {
   .curated-collections__content {
     justify-content: space-around;
+  }
+}
+@media (max-width: 630px) {
+  .curated-collections__link {
+    padding: 0 22px;
   }
 }
 @media (max-width: 400px) {

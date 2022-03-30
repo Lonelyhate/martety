@@ -1,4 +1,13 @@
 .curated-collections {
+    &__container{
+        padding-bottom: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__link{
+        padding: 5px 27px 0;
+    }
 }
 .container {
 }
@@ -76,6 +85,14 @@
     .curated-collections{
         &__content{
             justify-content: space-around;
+        }
+    }
+}
+
+@media (max-width: 630px) {
+    .curated-collections{
+        &__link{
+            padding: 0 22px;
         }
     }
 }
